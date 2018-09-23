@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Listener Example">
+    <listeners>
+        <listener class-name="com.fw.rkw.Listener" />
+    </listeners>
+
+    <test name="all">
+        <packages>
+            <package name=".*">
+            </package>
+        </packages>
+    </test>
+
+</suite>
