@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build and Analyzing') {
             steps {
-                withSonarQubeEnv("Local SonarQube Server") {
+                withSonarQubeEnv("sonar") {
                     sh "mvn clean compile sonar:sonar"
                 }
             }
