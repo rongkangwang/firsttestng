@@ -16,7 +16,9 @@ pipeline {
         stage('Build and Analyzing') {
             steps {
                 withSonarQubeEnv("sonar") {
-                    sh "mvn clean compile sonar:sonar"
+                    withMaven(maven:'m3', mavenLocalRepo:'.repository') {
+                        sh "mvn clean compile sonar:sonar"
+                    }
                 }
             }
         }
