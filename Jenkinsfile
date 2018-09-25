@@ -10,7 +10,7 @@ pipeline {
             steps {
                 withSonarQubeEnv("sonar") {
                     withMaven(maven:'m3') {
-                        sh "mvn clean compile sonar:sonar"
+                        sh "mvn clean compile sonar:sonar -Dsonar.analysis.mode=preview"
                     }
                 }
             }
