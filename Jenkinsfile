@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test Maven') {
             steps {
-                withMaven(maven:'m2') {
+                withMaven(maven:'m3') {
                     sh 'mvn test'
                 }
             }
