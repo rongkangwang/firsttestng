@@ -7,8 +7,10 @@ pipeline {
             }
         }
         stage('Test Maven') {
-            withMaven(maven:'M3') {
-                sh 'mvn test'
+            steps {
+                withMaven(maven:'M3') {
+                    sh 'mvn test'
+                }
             }
         }
         stage('Build and Analyzing') {
